@@ -1,29 +1,28 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import House from './components/House'
+import SearchHouse from "./components/SearchHouse";
 
 
 export default function App() {
   
-  const apiUrl = 'http://test.ru:8088/test/home';
   const [houseInfo, setHouseInfo] = useState(null);
+  const [showSearchForm, setShowSearchFrom] = useState(false)
   useEffect(() => {  
-    axios
-    .get(apiUrl).then((resp) => {
-      setHouseInfo(resp.data)
-      console.log(resp.data)  
-    })
-    .catch((e) => console.log(e))
+
   }, [])
 
-  if (!houseInfo) {
-    return null
-  }
  
   return (
-    <div>
-      <House house={houseInfo}/>
+    <div className="App">
+      <button onClick={() => setShowSearchFrom(!showSearchForm)}>Найти домовую карту </button>
+      <button>Создать домовую карту </button>
+
+      <div>
+        {showSearchForm && <SearchHouse />} 
+      </div>
     </div>
+
   );
 }
 
