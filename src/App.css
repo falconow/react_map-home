@@ -1,3 +1,42 @@
-.House {
-  padding: 8px;
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
 }
+
+.House {
+  margin: 15px;
+}
+
+.Entrance {
+  display: inline-block;
+  margin: 15px;
+  border: 2px solid #000;
+}
+
+.Entranceh4 {
+  padding: 3px;
+  text-align: center;
+ }
+
+ .Floor{
+  display: flex;
+  border-bottom: 2px solid #000;
+  
+ }
+
+ .FloorNumber{
+  padding: 10px;
+  border-right: 2px solid #000;
+  font-weight: bold; 
+
+ }
+
+ .Flat{
+  width: 20px;
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+ }
+
+

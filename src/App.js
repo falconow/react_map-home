@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import House from './components/House'
-import './App.css';
+
 
 export default function App() {
   
@@ -10,7 +10,8 @@ export default function App() {
   useEffect(() => {  
     axios
     .get(apiUrl).then((resp) => {
-      setHouseInfo(resp.data)  
+      setHouseInfo(resp.data)
+      console.log(resp.data)  
     })
     .catch((e) => console.log(e))
   }, [])
